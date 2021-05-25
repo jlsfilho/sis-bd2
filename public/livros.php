@@ -24,7 +24,7 @@
         $titulo = 'titulo';
         $autor = 'autor';
         $classificacao = 'classificacao';
-        $paginas = 'paginas'
+        $paginas = 'paginas';
         /*TODO-1: Adicione uma variavel para cada coluna */
 
 
@@ -32,8 +32,8 @@
             'SELECT ' . $titulo .
             '     , ' . $autor .
             '     , ' . $classificacao .
-            ','.$paginas.
-            '  FROM livros';
+            '     , ' . $paginas.
+            '  FROM `livros`';
 
 
         $resultado = mysqli_query($conexao, $sql);
@@ -48,7 +48,6 @@
             '    <tr>' .
             '        <th>' . $titulo . '</th>' .
             '        <th>' . $autor . '</th>' .
-            /* TODO-3: Adicione as variaveis ao cabeçalho da tabela */
             '        <th>' . $classificacao . '</th>' .
             '<th>' . $paginas . '</th>' .
             '    </tr>';
