@@ -54,6 +54,7 @@ classificacao VARCHAR(10), paginas INT NOT NULL)';
             if (!$resultado) {
                 echo mysqli_error($conexao);
              }
+             else return $resultado;
          }
 
 
@@ -63,7 +64,7 @@ classificacao VARCHAR(10), paginas INT NOT NULL)';
 
         executeQuery($conexao, $CREATE);
         executeQuery($conexao, $INSERT);
-        executeQuery($conexao, $SQL);
+        $resultado = executeQuery($conexao, $SQL);
 
 
         echo $CABECALHO;
